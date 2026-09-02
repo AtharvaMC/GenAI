@@ -32,14 +32,3 @@ for prompt in prompts:
         json.dump(response.model_dump(), file, indent=4)
     usage=response.usage
     print(f"Prompt: {prompt} -->your tokens: {usage.prompt_tokens} completion_tokens: {usage.completion_tokens} total tokens: {usage.total_tokens}  Finish Reason: {response.choices[0].finish_reason}")
-
-# prompt="Do you know Padho with Pratyush"
-# # message me role and content
-# message={
-#     "role": role,
-#     "content": prompt
-# }
-
-# messages=[message]
-
-# response=client.chat.completions.create(model=model, messages=messages)
